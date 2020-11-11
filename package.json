@@ -1,0 +1,25 @@
+{
+  "name": "disbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BRonen/disbot.git"
+  },
+  "author": "BRonen <brennopereira6@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BRonen/disbot/issues"
+  },
+  "homepage": "https://github.com/BRonen/disbot#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}
