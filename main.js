@@ -5,7 +5,9 @@ const {token, prefix} = require('./config.json');
 
 const Commands = {};
 
-Commands.error = function (cmd, msg){
+Commands.ping = msg => msg.reply('pong!');
+
+Commands.error = function (msg, cmd){
   msg.reply(`Invalid command: ${cmd}`);
   return;
 }
@@ -14,15 +16,20 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', msg => {
+client.on( 'message', msg => {
   const args = msg.content.trim().split(/ +/);
-  if(args[0] != prefix || msg.author.bot){
+
+  if(args[0][0] != prefix || msg.author.bot){
     return;
   }
-  if(Commands[args[1]])
-    Commands[args[1]](msg);
+
+  args[0] = args[0].slice(1);
+
+  if(Commands[args[0]])
+    Commands[args[0]](msg);
   else
-    Commands.error(args[1], msg);
-});
+    Commands.error(msg, args[0]);
+
+} );
 
 client.login(token);
