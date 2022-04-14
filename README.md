@@ -1,0 +1,2 @@
+# katbot
+Discord bot
