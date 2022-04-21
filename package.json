@@ -1,0 +1,21 @@
+{
+  "name": "katbot",
+  "version": "1.0.0",
+  "description": "Discord bot",
+  "main": "index.js",
+  "repository": "https://github.com/BRonen/katbot.git",
+  "author": "Brenno Rodrigues <brennopereira6@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -r dotenv/config index.js"
+  },
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "enmap": "^5.9.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
