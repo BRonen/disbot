@@ -1,5 +1,5 @@
 {
-  "name": "katbot",
+  "name": "disbot",
   "version": "1.0.0",
   "description": "Discord bot",
   "main": "index.js",
